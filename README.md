@@ -1,6 +1,6 @@
 Cue
 ======
-BootStrap Like Toast Library
+Library to create fully customizable Bootstrap styled alerts
 
 Demo
 ----
