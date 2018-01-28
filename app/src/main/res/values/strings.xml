@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CueSample</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="primary">This is a primary toast—check it out!</string>
+    <string name="success">This is a success toast—check it out!</string>
+    <string name="secondary">This is a secondary toast—check it out!</string>
+    <string name="danger">This is a danger toast—check it out!</string>
+    <string name="warning">This is a warning toast—check it out!</string>
+    <string name="info">This is a info toast—check it out!</string>
+    <string name="light">This is a light toast—check it out!</string>
+    <string name="dark">This is a dark toast—check it out!</string>
+</resources>
