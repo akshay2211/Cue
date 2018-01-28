@@ -85,8 +85,9 @@ public class Cue {
         return textSize;
     }
 
-    public void setTextSize(int textSize) {
+    public Cue setTextSize(int textSize) {
         this.textSize = textSize;
+        return this;
     }
 
     public Cue with(Context context) {
