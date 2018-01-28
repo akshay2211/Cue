@@ -31,14 +31,14 @@ custom usage
                 .setGravity(Gravity.CENTER_VERTICAL | Gravity.BOTTOM)
                 .setType(Type.CUSTOM)
                 .setDuration(Duration.LONG)
-                .setBorderWidth(3)
-                .setCornerRadius(5)
-                .setCustomFontColor(Color.parseColor("#ffffff"),
+                .setBorderWidth(5)
+                .setCornerRadius(10)
+                .setCustomFontColor(Color.parseColor("#fd79a8"),
                         Color.parseColor("#ffffff"),
-                        Color.parseColor("#ffffff"))
+                        Color.parseColor("#e84393"))
                 .setFontFace("fonts/custom_font.ttf")
-                .setPadding(20)
-                .setTextSize(16)
+                .setPadding(30)
+                .setTextSize(20)
                 .show();
 ```
 
