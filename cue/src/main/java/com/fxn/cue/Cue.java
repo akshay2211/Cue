@@ -135,7 +135,7 @@ public class Cue {
         Toast toast = new Toast(context.getApplicationContext());
         View view = LayoutInflater.from(context).inflate(R.layout.content_custom_toast, null, false);
         TextView custom_text = view.findViewById(R.id.custom_text);
-        custom_text.setText(" " + message + " ");
+        custom_text.setText(message);
         custom_text.setTextSize(textSize);
         custom_text.setPadding(padding, padding, padding, padding);
         if (!fontFaceString.isEmpty()) {
