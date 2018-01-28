@@ -2,6 +2,9 @@ Cue
 ======
 Library to create fully customizable Bootstrap styled alerts
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Cue-blue.svg?style=flat)](https://android-arsenal.com/details/1/6722)
+[![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=9)
+    
 Demo
 ----
 ![](media/media.gif)
