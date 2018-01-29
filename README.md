@@ -12,8 +12,19 @@ Demo
 
 Usage
 -----
-basic usage
+Add in app build.gradle
 
+```groovy
+        allprojects {
+            repositories {
+                maven {
+                    url "https://jitpack.io"
+                }
+            }
+        }
+```
+
+Basic usage
 ```groovy
         Cue.init()
                 .with(MainActivity.this)
@@ -21,12 +32,13 @@ basic usage
                 .setType(Type.PRIMARY)
                 .show();
 ```
-types can be
+
+Types can be
 ```groovy
     PRIMARY, SUCCESS, SECONDARY, DANGER, WARNING, INFO, LIGHT, DARK, CUSTOM
 ```
-custom usage
 
+Custom usage
 ```groovy
         Cue.init()
                 .with(MainActivity.this)
@@ -53,6 +65,7 @@ Download
 ```groovy
         compile 'com.fxn769:cue:1.1'
 ```
+
 or Maven:
 ```xml
         <dependency>
@@ -62,12 +75,14 @@ or Maven:
           <type>pom</type>
         </dependency>
 ```
+
 or ivy:
 ```xml
         <dependency org='com.fxn769' name='cue' rev='1.1'>
           <artifact name='cue' ext='pom' ></artifact>
         </dependency>
 ```
+
 Snapshots of the development version are available in [Sonatype's `snapshots` repository][snap].
 
 License
