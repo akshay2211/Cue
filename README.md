@@ -54,6 +54,8 @@ Custom usage
                 .setFontFace("fonts/custom_font.ttf")
                 .setPadding(30)
                 .setTextSize(20)
+                .setTextGravity(Gravity.CENTER)
+                .setHideToast(true)
                 .show();
 ```
 
