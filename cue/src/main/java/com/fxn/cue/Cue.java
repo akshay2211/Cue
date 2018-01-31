@@ -23,6 +23,7 @@ public class Cue {
     private String message;
     private int textSize = 14;
     private int gravity = Gravity.CENTER_VERTICAL;
+    private int textGravity = Gravity.CENTER;
     private Duration duration;
     private String fontFaceString = "";
     private com.fxn.cue.enums.Type type;
@@ -131,10 +132,19 @@ public class Cue {
         return this;
     }
 
+    public int getTextGravity() {
+        return textGravity;
+    }
+
+    public void setTextGravity(int textGravity) {
+        this.textGravity = textGravity;
+    }
+
     public void show() {
         Toast toast = new Toast(context.getApplicationContext());
         View view = LayoutInflater.from(context).inflate(R.layout.content_custom_toast, null, false);
         TextView custom_text = view.findViewById(R.id.custom_text);
+        custom_text.setGravity(textGravity);
         custom_text.setText(message);
         custom_text.setTextSize(textSize);
         custom_text.setPadding(padding, padding, padding, padding);
