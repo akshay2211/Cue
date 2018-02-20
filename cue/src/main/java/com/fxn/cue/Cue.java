@@ -23,6 +23,7 @@ public class Cue {
     private String message;
     private int textSize = 14;
     private int gravity = Gravity.CENTER_VERTICAL;
+    private int textGravity = Gravity.CENTER;
     private Duration duration;
     private String fontFaceString = "";
     private com.fxn.cue.enums.Type type;
@@ -32,6 +33,7 @@ public class Cue {
     private int custom_background_color = ColorRes.primary_background_color;
     private int custom_border_color = ColorRes.primary_border_color;
     private int custom_text_color = ColorRes.primary_text_color;
+    private boolean hideToast = false;
 
     public static Cue init() {
         cue = new Cue();
@@ -131,10 +133,27 @@ public class Cue {
         return this;
     }
 
+    public int getTextGravity() {
+        return textGravity;
+    }
+
+    public void setTextGravity(int textGravity) {
+        this.textGravity = textGravity;
+    }
+
+    public boolean isHideToast() {
+        return hideToast;
+    }
+
+    public void setHideToast(boolean hideToast) {
+        this.hideToast = hideToast;
+    }
+
     public void show() {
         Toast toast = new Toast(context.getApplicationContext());
         View view = LayoutInflater.from(context).inflate(R.layout.content_custom_toast, null, false);
         TextView custom_text = view.findViewById(R.id.custom_text);
+        custom_text.setGravity(textGravity);
         custom_text.setText(message);
         custom_text.setTextSize(textSize);
         custom_text.setPadding(padding, padding, padding, padding);
@@ -147,6 +166,15 @@ public class Cue {
         toast.setGravity(gravity, 0, 0);
         toast.setView(view);
         toast.show();
+
+        if(hideToast){
+            view.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    toast.cancel();
+                }
+            });
+        }
     }
 
     private void getShape(Type type, TextView custom_text) {
