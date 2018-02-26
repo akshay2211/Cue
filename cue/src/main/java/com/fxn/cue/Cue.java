@@ -35,8 +35,9 @@ public class Cue {
     private int custom_text_color = ColorRes.primary_text_color;
     private boolean hideToast = false;
 
-    public static Cue init() {
-        cue = new Cue();
+   
+    public static Cue getInstance() {
+        if(cue==null) cue = new Cue();
         return cue;
     }
 
